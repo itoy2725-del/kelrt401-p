@@ -5,11 +5,11 @@ let pool: mysql.Pool | null = null;
 export function getPool(): mysql.Pool {
   if (!pool) {
     pool = mysql.createPool({
-      host:     process.env.DATABASE_HOST || 'mysql-8ab6a54-itoy2725-c48a.l.aivencloud.com',
+      host:     process.env.DATABASE_HOST || 'mysql-2f3e85d0-bellabelatr-e464.j.aivencloud.com',
       user:     process.env.DATABASE_USER || 'avnadmin',
-      password: process.env.DATABASE_PASSWORD || 'AVNS_tjK9axp5ajcOC3r-oki',
+      password: process.env.DATABASE_PASSWORD || 'AVNS_tPRCvJcfME90GziNmPs',
       database: process.env.DATABASE_NAME || 'defaultdb',
-      port:     Number(process.env.DATABASE_PORT) || 13100,
+      port:     Number(process.env.DATABASE_PORT) || 13257,
       ssl: process.env.DATABASE_SSL_CA
         ? { ca: process.env.DATABASE_SSL_CA }
         : { rejectUnauthorized: false },
